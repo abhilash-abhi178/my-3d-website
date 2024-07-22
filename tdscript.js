@@ -33,3 +33,32 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+} else {
+    // Call addButtons function after the message is fully typed
+    addButtons();
+  }
+}
+
+function addButtons() {
+  // Create and append buttons
+  var buttonContainer = document.createElement('div');
+  buttonContainer.style.textAlign = 'center';
+  buttonContainer.style.marginTop = '20px';
+  
+  var button1 = document.createElement('button');
+  button1.innerHTML = 'Button 1';
+  button1.onclick = function() {
+    alert('Button 1 clicked');
+  };
+  
+  var button2 = document.createElement('button');
+  button2.innerHTML = 'Button 2';
+  button2.onclick = function() {
+    alert('Button 2 clicked');
+  };
+  
+  buttonContainer.appendChild(button1);
+  buttonContainer.appendChild(button2);
+  
+  document.getElementById('text1').appendChild(buttonContainer);
+}
