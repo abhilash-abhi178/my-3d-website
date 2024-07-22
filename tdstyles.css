@@ -1,112 +1,71 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f0f0f0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-  }
-  
-  .bg_heart {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('heart-background.jpg') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    opacity: 0.5;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  #text1 {
-    font-size: 3em;
-    color: red;
-  }
-  
-  .hearts {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: -1;
-  }
-  
-  .heart {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: red;
-    margin: -50px;
-    transform: rotate(45deg);
-    animation: float 5s infinite;
-  }
-  
-  .heart::before,
-  .heart::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: red;
-    border-radius: 50%;
-  }
-  
-  .heart::before {
-    top: -25px;
-    left: 0;
-  }
-  
-  .heart::after {
-    left: 25px;
-    top: 0;
-  }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0) rotate(45deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-1000px) rotate(45deg);
-      opacity: 0;
-    }
-  }
-  
-  .heart:nth-child(1) {
-    left: 20%;
-    animation-duration: 5s;
-    animation-delay: 0s;
-  }
-  
-  .heart:nth-child(2) {
-    left: 40%;
-    animation-duration: 7s;
-    animation-delay: 2s;
-  }
-  
-  .heart:nth-child(3) {
-    left: 60%;
-    animation-duration: 6s;
-    animation-delay: 4s;
-  }
-  
-  .heart:nth-child(4) {
-    left: 80%;
-    animation-duration: 8s;
-    animation-delay: 1s;
-  }
-  
-  .heart:nth-child(5) {
-    left: 50%;
-    animation-duration: 10s;
-    animation-delay: 3s;
-  }
-  
+html,body{
+  margin:0px;
+  height:100%;
+}
+.bg_heart{
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+ overflow:hidden;
+  background-image:url("https://i.pinimg.com/originals/51/d8/37/51d8374126446d495348b6032202126f.jpg");
+  background-size:100% 100%;
+  z-index:-1;
+}
+
+.container{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  text-align:center;
+  color:white;
+  font-family:cursive;
+}
+
+
+.heart{
+  position:absolute;
+  top:-50%;
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -m-transform:rotate(-45deg);
+}
+.heart:before{
+  position:absolute;
+  top:-50%;
+  left:0;
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background:inherit;
+  border-radius:100%;
+}
+.heart:after{
+  position:absolute;
+  top:0;
+  right:-50%;
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background:inherit;
+  border-radius:100%;
+}
+
+@keyframes love {
+  0%{top:110%}
+}
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
