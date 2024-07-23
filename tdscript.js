@@ -1,3 +1,4 @@
+// Get the audio element
 var audio = document.getElementById('background-music');
 
 // Play the audio
